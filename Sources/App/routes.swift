@@ -25,7 +25,7 @@ func routes(_ app: Application) throws {
         try await req.collection.countDocuments(getRandomFilter())
     }
 
-    elf.get("distinct") { req -> EventLoopFuture<Int> in
+    elf.get("countDocuments") { req -> EventLoopFuture<Int> in
         req.collection.countDocuments(getRandomFilter())
     }
 }
